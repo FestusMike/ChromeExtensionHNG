@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>List of Videos</title>
+    <title>List Videos</title>
 </head>
 <body>
-    <h2>List of Videos</h2>
+    <h1>List of Videos</h1>
     <ul>
         {% for video in videos %}
-            <li><a href="{{ url_for('play_video', video_id=video.id) }}">{{ video.video_name }}</a></li>
+            <li>
+                Video Name: {{ video.video_name }}
+                <br>
+                Date Uploaded: {{ video.date_uploaded }}
+                <br>
+                <a href="{{ url_for('play_video', video_id=video.id) }}">Play Video</a>
+            </li>
         {% endfor %}
     </ul>
-
     <h2>Upload Video</h2>
     <form action="/upload" method="post" enctype="multipart/form-data">
         <input type="file" name="video" accept="video/*" required>
@@ -18,3 +23,4 @@
     </form>
 </body>
 </html>
+

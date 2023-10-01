@@ -8,6 +8,7 @@
     <p>Video Name: {{ video.video_name }}</p>
     <video width="640" height="480" controls>
         <source src="{{ url_for('send_video', filename=video.video_name) }}" type="video/mp4">
+        Your browser does not support the video tag.
     </video>
     <br><br>
     <a href="/">Back to List of Videos</a>
