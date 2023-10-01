@@ -1,5 +1,4 @@
-from package import db
-
+from package import db, app
 
 class Video(db.Model):
     __tablename__ = 'video_entry'
@@ -18,3 +17,6 @@ class Video(db.Model):
 
     def __repr__(self):
         return f"{self.id}"
+
+with app.app_context():
+    db.create_all()
