@@ -1,6 +1,3 @@
-# ChromeExtensionHNG
-BASE URL: http://timi1234.pythonanywhere.com
-
 GET:
 http://timi1234.pythonanywhere.com/api/videos
 
